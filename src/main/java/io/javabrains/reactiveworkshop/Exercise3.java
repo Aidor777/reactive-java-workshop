@@ -10,11 +10,10 @@ public class Exercise3 {
 
         // Get all numbers in the ReactiveSources.intNumbersFlux stream
         // into a List and print the list and its size
-        // TODO: Write code here
-
-
-        System.out.println("Press a key to end");
-        System.in.read();
+        var numbers = ReactiveSources.intNumbersFlux().toStream().toList();
+        System.out.println("Numbers: " + numbers);
+        System.out.println("List size: " + numbers.size());
+        
     }
 
 }
